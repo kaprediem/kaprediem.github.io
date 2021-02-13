@@ -1,125 +1,105 @@
-/*wip by LewdShawty||D4ndie*/
 
-@import url(assets/font.css);
-
-body {
-    width: 100%;
-    margin: auto;
-    background: #EDCAD1;
-}
-
-#main {
-    display: flex;
-    align-items: center;
-    margin:auto;
-    width: 1000px;
-
-    margin-top: 10%;
-    font-family: 'No Added Sugar';
-}
-
-#box {
-    text-align: center;
-    align-items: center;
-    color: #C9939E;
-    margin: auto;
-    width: 1000px;
-}
-
-#secondary{
-    align-items: center;
-    width: 725px;
-    margin: auto;
-    margin-top: 15px;
-
-    border-radius: 5px;
-    background: #F2DADF
-}
-
-names {
-    /*font-size: 200px;*/
-    font-size: 175px;
-    font-family: 'Dollie';
-    text-shadow: 4px 4px #F2DADF;
-    color: #B87A86;
-}
-
-#welcome {
-    /*font-size: 45px;*/
-    font-size: 30px;
-    margin-top: 5px;
-    font-family: 'barbie';
-    text-shadow: 2px 2px #F2DADF;
-}
-
-#search {
-    padding: 10px;
-
-}
-
-#searchField {
-    width: 500px;
-    border: #F2DADF;
-    text-align: center;
-    font-family: 'No Added Sugar';
-    font-size: 25px;
-    background: #F2DADF;
-    color: #C9939E;
-}
-
-#shortcuts {
-    align-content: center;
-}
-
- /* Dropdown Button */
- .dropbtn {
-    background-color: #F2DADF;
-    color: white;
-    padding: 9px;
-    font-size: 8px;
-    border: none;
-    width: 30px;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #F2DADF;
-    z-index: 0;
-    left: 50%;
-    margin-left: -75px;
-    width: 150px;
-    border-radius: 5px
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: #C9939E;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #EDCAD1;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #EDCAD1;
-    border-radius: 5px;
-    width: 60px;
-} 
+<!-- Rose Quarts | a start page by D4ndie-->
+<html>
+    <head>
+        <title>start</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/bun.png" />
+        <script type="text/javascript" src="jquery-3.3.1.slim.min.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="box">
+                <!-- Nicknames-->
+                <script>
+                    names = [
+                        'Angel',
+                        'Baby Girl',
+                        'Darling',
+                        'Dumpling',
+                        'Honey',
+                        'Princess',
+                        'Sweet Girl'
+                        ];
+                        index = Math.floor(Math.random() * names.length);
+                        document.write("<names>" + names[index] + "</names>");
+                </script> 
+                <div id="welcome"></div> 
+                <div id="secondary">               
+                    <div id="search">
+                        <form onsubmit="duckSearch()" action="javascript:void(0)">
+                            <input id="searchField" value="" placeholder="search" type="text">
+                        </form>
+                    </div>
+                    <!--shortcuts-->
+                    <div id="shortcuts">
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                        <img src="assets/tv.png">
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="https://www.youtube.com/">youtube</a>
+                                  <a href="https://myanimelist.net/">myanimelist</a>
+                                  <a href="https://www.netflix.com/">netflix</a>
+                                  <a href="https://vrv.co/">vrv</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                        <img src="assets/heart.png">
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="https://old.reddit.com/hot/">reddit</a>
+                                  <a href="https://boards.4chan.org/wg/catalog">/wg/</a>
+                                  <a href="https://www.tumblr.com/dashboard">tumblr</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                        <img src="assets/folder.png">
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="https://github.com/">github</a>
+                                  <a href="https://catbox.moe/">catbox</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                                        <img src="assets/cart.png">
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="https://www.amazon.com/">amazon</a>
+                                    <a href="https://www.humblebundle.com/">humble bundle</a>
+                                    <a href="https://www.massdrop.com/my-communities">massdrop</a>
+                                    <a href="https://www.yesstyle.com/en/">yesstyle</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--js for welcome-->
+        <script>
+                var greeting;
+                var time = new Date().getHours();
+                if (time < 7) {
+                    greeting = "How are you even awake?";
+                } else if (time < 19) {
+                    greeting = "Hope you have a lovely day!";
+                } else {
+                    greeting = "Aren't you sleepy?";
+                }
+            document.getElementById("welcome").innerHTML = greeting;
+        </script>
+        <!--js for search-->
+        <script>
+            function duckSearch() {
+                var searchField = document.getElementById("searchField");
+                if (searchField && searchField.value) {
+                    var query = escape(searchField.value);
+                    window.location.href = "https://duckduckgo.com/?q=" + query;
+                }
+            }
+        </script>
+    </body>
+</html>
