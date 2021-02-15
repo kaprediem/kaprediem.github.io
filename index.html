@@ -27,7 +27,7 @@
                 <div id="secondary">               
                     <div id="search">
                         <form onsubmit="duckSearch()" action="javascript:void(0)">
-                            <input id="searchField" value="" placeholder="search" type="text">
+                            <input id="searchField" value="" placeholder="whatcha looking for?" type="text">
                         </form>
                     </div>
                     <!--shortcuts-->
@@ -82,7 +82,9 @@
                 var time = new Date().getHours();
                 if (time < 7) {
                     greeting = "How are you even awake?";
-                } else if (time < 19) {
+                } else if (time < 14) {
+                    greeting = "Good morning, angel!";
+                }else if (time < 22) {
                     greeting = "Keep going! Baby steps!";
                 } else {
                     greeting = "Aren't you sleepy?";
@@ -95,7 +97,7 @@
                 var searchField = document.getElementById("searchField");
                 if (searchField && searchField.value) {
                     var query = escape(searchField.value);
-                    window.location.href = "https://duckduckgo.com/?q=" + query;
+                    window.location.href = "https://google.com/?q=" + query;
                 }
             }
         </script>
