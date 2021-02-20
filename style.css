@@ -125,7 +125,7 @@ names {
 } 
 
 /* Background image */
-.background-image {
+.background-img {
 	background:url('assets/sleep.png');
 	position: absolute;
 	right: 0px
