@@ -5,7 +5,8 @@
 body {
     width: 100%;
     margin: auto;
-    background: url('assets/sleep.png'), ##EDCAD1;
+    background-image: ('assets/sleep.png'); 
+    background-color: ##EDCAD1;
  	background-repeat: no-repeat;
   	background-attachment: fixed;
  	background-position: bottom-right;
