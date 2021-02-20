@@ -5,7 +5,10 @@
 body {
     width: 100%;
     margin: auto;
-    background: #EDCAD1;
+    background-image: url('assets/sleep.png');
+ 	background-repeat: no-repeat;
+  	background-attachment: fixed;
+ 	background-position: bottom-right;
 }
 
 #main {
@@ -123,12 +126,3 @@ names {
     border-radius: 5px;
     width: 60px;
 } 
-
-/* Background image */
-.background-img {
-	background:url('assets/sleep.png');
-	position: absolute;
-	right: 0px
-	bottom: 0px
-	repeat-x;
-}
